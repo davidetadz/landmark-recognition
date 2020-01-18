@@ -69,7 +69,7 @@ def Run():
         os.mkdir(out_dir)
 
     key_url_list = ParseData(data_file)
-    pool = multiprocessing.Pool(processes=1)
+    pool = multiprocessing.Pool(processes=50)
     pool.map(DownloadImage, key_url_list)
 
 
